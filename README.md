@@ -1,1 +1,2 @@
 commit
+my majaro linux
