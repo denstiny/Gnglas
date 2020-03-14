@@ -1,0 +1,269 @@
+python 关键词笔记
+
+
+
+
+
+
+
+ title（） 字符串 开头字符大写
+
+ upper （） 字符串 全部大写
+
+ lower （） 字符串 全部小写
+
+
+
+ rstrip （） 删除字符串 尾部空白 \--
+
+ lstrip （）删除字符串 头部空白		|- 使用方法 ：字符串/关键词.strip（删除的内容） 不添加删除内容默认删除空格
+
+ strip （） 删除字符串 两端空白  /--
+
+
+
+ str （） 将数字转化为字符
+
+
+
+ append （） 在列表 尾部 添加新元素
+
+ insert（）在列表 任何位置 添加新元素
+
+ insert（位置，元素）	例： name.insert(0,"beijing")  在name【0】加入 ”beijing“ 的元素
+
+ del 删除列表元素		用法：del name【0】 删除name【0】的 元素
+
+ pop 弹出列表元素		用法 names = name.pop()		默认弹出 name 最后一个元素并赋值给 names     ; pop还可以弹出任意地址元素，
+
+ names = name.pop(2) 弹出  name  的第三个元素
+
+ startswith()	查找 字符串 头 是否 符合括号内的字符 }		使用方法 ：
+
+ endswith()		查找 字符串 尾 是否 符合括号内的字符 }		字符串/字符变量.关键字（字符/字符串）如果符合则返回True 否则 False
+
+ True 表示1			真
+
+ False 表示 0		假
+
+ find()	 查找字符的位置并返回字符的坐标	没有找到则返回-1  }  使用方法 ：
+
+index()	 查找字符的位置并返回字符的坐标 没有找到则报错    }  字符串/字符变量.关键字 （字符串/字符）
+
+reple()  替换字符串    使用方法 ：字符串.reple（要替换的字符，替换成）
+
+count() 返回某个字符在字符串出的次数  使用方法 ： 字符串.count（要计算次数的字符）
+
+center()  把字符串放到中间，两端用特定字符补齐		例如： “name”.center（10，“-”） 结果：--name---
+
+%s字符串 %d整形  %f浮点数  格式化字符串  使用方法 ： “helo %s” %s（name）
+
+format 格式化字符串 使用方法 ： “helo {}".format(name)  "helo name"
+
+type()  判断变量的类型 用法： type（变量） 输出变量的类型
+
+for 循环
+
+ 用法： 
+
+ for 变量 in 变量 ：
+
+	代码块    //注意缩进 python 没有括号，for 语句范围靠缩进表示
+
+	例如：
+
+	for a in range（1，4，2）		//range是数字生成工具，range（其实数字，范围数字，步进数字）如：rang（1，4，2） 表示从1 开始 每次增加2点数值
+
+	print（a）	每次循环 range都会返回值给 in 前面的变量
+
+while  循环
+
+	while 条件语句:		记得加上冒号 用法和c一样
+	
+
+循环语句中一些处理循环的关键字
+
+beak continue 上面连个和c的类似 另外一个是 pass 这个表示空，起到一个站位的作用
+
+
+专门处理数字列表的关键词：
+
+
+函数	返回值 ( 描述 )
+
+abs(x)	返回数字的绝对值，如abs(-10) 返回 10
+
+ceil(x) 	返回数字的上入整数，如math.ceil(4.1) 返回 5
+
+cmp(x, y)	如果 x < y 返回 -1, 如果 x == y 返回 0, 如果 x > y 返回 1
+
+exp(x) 	返回e的x次幂(ex),如math.exp(1) 返回2.718281828459045
+
+fabs(x)	返回数字的绝对值，如math.fabs(-10) 返回10.0
+
+floor(x) 	返回数字的下舍整数，如math.floor(4.9)返回 4
+
+log(x) 	如math.log(math.e)返回1.0,math.log(100,10)返回2.0
+
+log10(x) 	返回以10为基数的x的对数，如math.log10(100)返回 2.0
+
+max(x1, x2,...) 	返回给定参数的最大值，参数可以为序列。
+
+min(x1, x2,...) 	返回给定参数的最小值，参数可以为序列。
+
+modf(x) 	返回x的整数部分与小数部分，两部分的数值符号与x相同，整数部分以浮点型表示。
+
+pow(x, y)	x**y 运算后的值。
+
+round(x [,n])	返回浮点数x的四舍五入值，如给出n值，则代表舍入到小数点后的位数。
+
+sqrt(x) 	返回数字x的平方根
+
+
+min 找到数字列表的 最小值  /|
+
+max 找到数字列表的 最大值	|——使用方法：关键词（数字列表）	例：a =【1，2，3】 sum（a） 输出6
+
+sum 计算数字数字列表的总和 \|
+
+
+
+sort 永久 处理队列，使队列的字符串安字母顺序排序 如果要相反的排序可以怎么加这个参数 sort（reverse = True ）
+
+sorted 暂时 处理队列，使队列的字符串安字母顺序排序 如果要相反的排序可以怎么加这个参数 sorted（字符串，reverse = True）
+
+reverse() 反方向排序
+
+len 计算字符串的长度
+
+
+
+input 获取用户输入数据   使用方法： 变量 input（提示信息）
+
+coding定义文件编码 例如: coding=utf-8 
+
+
+元组
+
+元组与列表相似 但是元组中的元素不可别修改，可以使用del删除整个元组
+
+字典
+字典是另一种可变容器模型，且可存储任类型的变量
+
+字典每个键值对用冒号 ： 分割，每个键值之间用逗号，分割，整个字典包括在花括号{}中，格式如
+
+
+d = {key1 : value1, key2 : value2 }
+字典调用时 a[key1]
+
+
+Python字典包含了以下内置函数：
+
+序号	函数及描述
+
+1	cmp(dict1, dict2)
+
+比较两个字典元素。
+
+2	len(dict)
+
+计算字典元素个数，即键的总数。
+
+3	str(dict)
+
+输出字典可打印的字符串表示。
+
+4	type(variable)
+
+返回输入的变量类型，如果变量是字典就返回字典类型。
+
+
+
+Python字典包含了以下内置方法：
+
+序号	函数及描述
+
+1	dict.clear()
+
+删除字典内所有元素
+
+2	dict.copy()
+
+返回一个字典的浅复制
+
+3	dict.fromkeys(seq[, val])
+
+创建一个新字典，以序列 seq 中元素做字典的键，val 为字典所有键对应的初始值
+
+4	dict.get(key, default=None)
+
+返回指定键的值，如果值不在字典中返回default值
+
+5	dict.has_key(key)
+
+如果键在字典dict里返回true，否则返回false
+
+6	dict.items()
+
+以列表返回可遍历的(键, 值) 元组数组
+
+7	dict.keys()
+
+以列表返回一个字典所有的键
+
+8	dict.setdefault(key, default=None)		查找key 没有就添加key
+和get()类似, 但如果键不存在于字典中，将会添加键并将值设为default
+
+9	dict.update(dict2)
+
+把字典dict2的键/值对更新到dict里
+
+10	dict.values()
+
+以列表返回字典中的所有值
+
+11	pop(key[,default])
+
+删字典给定键 key 所对应的值，返回值为被删除的值。key值必须给出。 否则，返回default值。
+
+12	popitem()
+
+返回并删除字典中的最后一对键和值。
+
+max 返回元组中元素的最大值
+min	返回元组中元素的最小值
+tuple 将列表转换成元组
+
+a={"a":"bug"}
+get 查找字典键 例如：a.get("a","bug")	如果没有找到则返回"bug"
+
+
+
+difference() 返回一个集合在a，而不再b中的元素		例如	a={"a","b"} b={"a","c"}	a.difference(b) 返回 b
+
+
+python 爬虫包
+
+urllib requests
+
+-- urllib :
+urllib.request()	打开读取 urls
+requests.geturl		返回URL
+requests.info		返回头信息
+requests.getcode	返回访问结果
+r 代表原字符
+content 转换二进制
+decode 转换制定编码
+如果爬虫访问得到403 则服务器有反爬虫机制 我们可以更改 headers请求
+在爬取一些非文本文件的时候需要的不再是utf-8 而是二进制格式了 可以使用with 打开/创建 文件with可以自动关闭文件 写入用 f.write进行写入 写入的时候切忌也要使用二进制格式 如content
+点击键盘上的 F12 找到console（控制台），找到logs（调试界面），输入document.charset或者document.characterset就会返回编码类型，可能是“utf-8”或“gbk”编码类型
+
+urllib.error		包含 urllib.requests 产生的常见问题的捕捉
+urllib.parse		包含 url 的方法
+urllib.robotparse	解析rebots.txt 文件
+
+
+python 图形编程
+tk 库
+
+

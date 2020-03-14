@@ -1,0 +1,25 @@
+cinnamon-settings #打开桌面你设置
+alsamixer 打开声音设置
+
+Nautilus manjaro默认的文件管理器
+
+binwalk 分文件
+binwalk -e 分离文件
+virt-manager  启动kvm虚拟机 
+git 
+…or create a new repository on the command line
+echo "# Gnglas" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:denstiny/Gnglas.git
+git push -u origin master
+…or push an existing repository from the command line
+git remote add origin git@github.com:denstiny/Gnglas.git
+git push -u origin master
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+git rm --cached 文件名  删除缓存
+
+rebase 重新确定分支
+

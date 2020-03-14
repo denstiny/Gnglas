@@ -1,0 +1,89 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+#
+#
+#设置显示格式 output_format = xxx (i3bar dzen2 ...)
+#interval指令指定i3status在打印下一个状态行之前将要休眠的时间（以秒为单位）
+general {
+        output_format = i3bar
+        colors = true
+        interval = 1
+}
+
+order += "volume master"
+order += "disk /"
+#order += "ipv6"
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "battery all"
+#获取系统负载
+#order += "load"
+order += "cpu_usage"
+order += "memory"
+order += "tztime local"
+
+#设置摆放位置 align = center/right/left
+#设置显示距离 min_width = 数字
+#设置是否显示分隔符 separator = true/false
+#设置分隔符两边的距离separator_block_width = 数字
+#默认开启
+
+wireless _first_ {
+        format_up = "W: (%quality at %essid) %ip"
+        format_down = "W: down"
+}
+
+ethernet _first_ {
+        format_up = "E: %ip (%speed)"
+        format_down = "E: down"
+}
+
+battery all {
+        min_width = 80
+        align = center
+        format = "%status %percentage %remaining"
+        format_down = "No battery"
+        status_chr = "⚡ CHR"
+        status_bat = "🔋 BAT"
+        status_unk = "? UNK"
+        status_full = "☻ FULL"
+}
+
+disk "/" {
+        format = "%avail"
+}
+#获取系统负载
+#load {
+#        format = "%0min"
+#}
+
+cpu_usage {
+        format = "CPU |ALL %usage|%cpu0 %cpu1 %cpu2 %cpu3"
+        max_threshold = 90
+        degraded_threshold = 80
+}
+#可以定义一个max_threshold，以便在最后一个时间间隔内CPU的平均值高于配置的阈值时使负载值变为红色。默认为95。
+
+#可以定义一个degraded_threshold，以便在最后一个时间间隔内CPU的平均值高于配置的阈值时将负载值变为黄色。默认为90。
+
+memory {
+        format = "Memory|Total %total|Used %used|%available|Free %free"
+        threshold_degraded = "1G"
+        format_degraded = "MEMORY < %available"
+}
+
+tztime local {
+        format = "%Y-%m-%d %H:%M:%S"
+}
+volume master {
+        format = "♪: %volume"
+        format_muted = "♪: muted (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
