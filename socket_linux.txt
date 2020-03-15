@@ -178,3 +178,4 @@ ________________________________________________________________________________
 |int inet_pton(int domain ,const char * restrict str ,void *restrict addr);
 |//将文本字符串转换成网络字节序
 |//domain 和上面的一样，str保存文本字节序，addr需要转换的字节序列
+
