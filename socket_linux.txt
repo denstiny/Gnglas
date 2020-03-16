@@ -179,3 +179,33 @@ ________________________________________________________________________________
 |//将文本字符串转换成网络字节序
 |//domain 和上面的一样，str保存文本字节序，addr需要转换的字节序列
 
+_______________________________________________________________________________________________
+服务是由地址的端口表示的，每个服务由一个唯一的众所周知的端口号来支持，可以使用函数getservbyname
+将服务名映射到端口号，使用函数getservbyport将一个端口号映射到一个服务名，使用函数getsetvnet顺序
+扫描服务数据库。
+_______________________________________________________________________________________________
+|#include <netdb.h>
+|struct servent *getservbuname(const char *name,const char *proto);
+|struct servent *getserbyport(int prot,const char *proto);
+|struct servent *getservbyent(void);
+|                    三个函数的返回值，若成功，返回指针，若失败，返回null
+|void setaervent(int stayopen);
+|void endservent(void);
+———————————————————————————————————————————————————————————————————————————————————————————————
+posix.1定义了若干个新的函数，允许一个应用程序将一个主机名和一个服务名映射到地址，或者反之，这些函
+数，代替了较老的函数gethostbyname和gethostbyaddr.
+getaddrinfo 函数允许将一个主机和一个服务名映射到一个地址。
+_______________________________________________________________________________________________
+#include <sys/socket>
+#include <netdb.h>
+int getaddrinfo(const char *restrict host,
+    const char *restrict service,
+    const struct addrinfo *restrict hint,
+    struct addrinfo **restrict res);
+                        返回值，若成功返回0,若出错返回非0  的错误吗
+void freeaddrinfo(struct addrinfo *ai);
+_______________________________________________________________________________________________
+需要提供主机名，服务名，或者两者都提供，如果仅仅提供一个名字，另外一个必须是一个空指针，主机名可以
+是一个节点或点分格式的主机地址。
+getaddrinfo 函数返回一个链表结构addrinfo。可以用freeaddrinfo来释放一个或多个这种结构，这取决于用ai_next
+字段链接起来的格式有多少。
