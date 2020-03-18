@@ -1,15 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from tkinter import *
+#使用之前请下载好thinter，bs4,PIL，requests库
+#  from tkinter import *
 import re 
 import requests
 import time
 from bs4 import BeautifulSoup
-from PIL import Image,ImageTk 
-music =1
-def my_app(event):
-    global music
-    muber = 0
+#  from PIL import Image,ImageTk
+#  music =1
+#  def my_app(event):
+    #  global music
+    #  muber = 0
     #  list_head = Listbox(head,bd = 10,cursor = "plus")
     #  if music == False:
         #  for a in range(1,20,2):
@@ -18,65 +19,65 @@ def my_app(event):
         #  for nuber in muber:
             #  list_head.insert(a,head)
             #  list_head.pack()
-    if music ==1:
-        music = 2
-        Label(head,text = "请输入key").pack()
-        ms = Entry(head,bd = 5)
-        ms.pack()
-
-    else:
-        if music !=3:
-            #  tim = Canvas(head,height = 60,width = 60)
+    #  if music ==1:
+        #  music = 2
+        #  Label(head,text = "请输入key").pack()
+        #  ms = Entry(head,bd = 5)
+        #  ms.pack()
+#
+    #  else:
+        #  if music !=3:
+           #  tim = Canvas(head,height = 60,width = 60)
             #  image = Image.open("/home/chroot/imger/th.png")
             #  file_image = ImageTk.PhotoImage(image)
             #  tim.create_image(70,80,image = file_image)
             #  tim.pack()
-            Button = Label(head,text = "开始",bg ="#7D7777" )
-            Button.bind("<Button-1>",mian_four)
-            Button.pack()
-            
-            music = 3
-        pass
+            #  Button = Label(head,text = "开始",bg ="#7D7777" )
+            #  Button.bind("<Button-1>",mian_four)
+            #  Button.pack()
+#
+            #  music = 3
+        #  pass
+#  def main():
+    #  global head,music
+    #  head = Tk()
+    #  指定窗口大小
+    #  head.geometry("300x500")
+    #  one_concas = Canvas(head,height = 300,width = 700)
+    #  im = Image.open("/mnt/home/chroot/image/AE.jpg")
+    #  one_concas_image = PhotoImage(file = "/mnt/chroo/home/image/AE.jpg")
+    #  one_concas_image = ImageTk.PhotoImage(im)
+    #  one_concas.create_image(0,0,image = one_concas_image)
+    #  one_concas.pack()
+#  j
+#  -------------------------------------------------------------------------------------------------分割
+    #  new canvas 2
+    #  canvas = Canvas(head,bg="#7D7777",height = 120,width = 120)
+    #  image_file = PhotoImage(file = "/mnt/home/chroot/image/1242205.gif")
+    #  canvas.create_image(0,0,anchor='nw',image = image_file)
+    #  绑定鼠标左键
+    #  canvas.bind("<Button-1>",my_app)
+    #  canvas.pack()
+    #  head.mainloop()
+    #  pass
+
+#-------------------------------------------------------------------------------------------------分割 
+#-------------------------------------------------------------------------------------------------分割 
+#-------------------------------------------------------------------------------------------------分割 
+#-------------------------------------------------------------------------------------------------分割 
+#-------------------------------------------------------------------------------------------------分割 
+#-------------------------------------------------------------------------------------------------分割 
+#-------------------------------------------------------------------------------------------------分割 
+#-------------------------------------------------------------------------------------------------分割 
+#-------------------------------------------------------------------------------------------------分割 
 def main():
-    global head,music 
-    head = Tk()
-    #指定窗口大小
-    head.geometry("300x500")
-    one_concas = Canvas(head,height = 300,width = 700)
-    im = Image.open("/mnt/home/chroot/image/AE.jpg")
-    #one_concas_image = PhotoImage(file = "/mnt/chroo/home/image/AE.jpg")
-    one_concas_image = ImageTk.PhotoImage(im)
-    one_concas.create_image(0,0,image = one_concas_image)
-    one_concas.pack()
-
-#-------------------------------------------------------------------------------------------------分割 
-    #new canvas 2
-    canvas = Canvas(head,bg="#7D7777",height = 120,width = 120)
-    image_file = PhotoImage(file = "/mnt/home/chroot/image/1242205.gif")
-    canvas.create_image(0,0,anchor='nw',image = image_file)
-    #绑定鼠标左键
-    canvas.bind("<Button-1>",my_app)
-    canvas.pack()
-    head.mainloop()
-    pass
-
-#-------------------------------------------------------------------------------------------------分割 
-#-------------------------------------------------------------------------------------------------分割 
-#-------------------------------------------------------------------------------------------------分割 
-#-------------------------------------------------------------------------------------------------分割 
-#-------------------------------------------------------------------------------------------------分割 
-#-------------------------------------------------------------------------------------------------分割 
-#-------------------------------------------------------------------------------------------------分割 
-#-------------------------------------------------------------------------------------------------分割 
-#-------------------------------------------------------------------------------------------------分割 
-def mian_four(event):
             
     #print("天使议会，自动发帖小程序 \n\t\t\t---作者：Gnglas")
     #爬取帖子 
     A = 0
     a = 0
     print("")
-    #_key = input("请输入key（key是存储葫芦侠的帐号，需要进行抓包获取）:")
+    _key = input("请输入key（key是存储葫芦侠的帐号，需要进行抓包获取）:")
 
     while(A <= 19):
         A += 1
