@@ -1,7 +1,7 @@
 commit
 my majaro linux
-[xiaomo@ArchLinux ~]$ sudo pacman -Qs xf86-input-evdev 
-local/xf86-input-evdev 2.10.2-1 (xorg-drivers xorg)
+[xiaomo@ArchLinux ~]$ sudo pacman -Qs xf86-input-evdev \n
+local/xf86-input-evdev 2.10.2-1 (xorg-drivers xorg)\m
     X.org evdev input driver
 [xiaomo@ArchLinux ~]$ 
 [xiaomo@ArchLinux ~]$ xinput list 
